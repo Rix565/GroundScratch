@@ -10,13 +10,13 @@ Clone the repository with this command:
 
 `git clone https://github.com/Rix565/GroundScratch/`
 
-Go to the newly created GroundScratch folder and modify the settings part of the main.py file (in the future, settings will be separated in a settings.py file)
+Go to the newly created GroundScratch folder and modify the settings.py file.
 
 Run this command to install all the dependencies:
 
 `pip install flask flask-login flask-cors`
 
-Finally, run this command (the 8080 port must be open):
+Finally, run this command (the 8080 port (or the port you set) must be open):
 
 `python main.py`
 
@@ -26,7 +26,7 @@ Just go to http://localhost:8080 and it should work!
 #### Production environnement
 Upload the repository zip file (Code->Download Zip) and extract it on a folder.
 
-Go to the newly created GroundScratch folder and modify the settings part of the main.py file (in the future, settings will be separated in a settings.py file)
+Go to the newly created GroundScratch folder and modify the settings.py file.
 
 If you're self-hosting the site:
 
