@@ -9,6 +9,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin, LoginManager, login_user, login_required, current_user, logout_user
 from flask_cors import CORS
 import textwrap
+from settings import *
 
 db = SQLAlchemy()
 
@@ -20,10 +21,10 @@ def random_filename(length):
 
 
 app = Flask('app')
-app.config['UPLOAD_FOLDER'] = os.path.dirname(os.path.realpath(__file__)) + "/uploads/"
-app.config['SECRET_KEY'] = 'secret key'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
-app.config['ROOT_URL'] = "http://localhost:8080/"
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['SECRET_KEY'] = SECRET_KEY
+app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
+app.config['ROOT_URL'] = ROOT_URL
 db.init_app(app)
 CORS(app, resources={r"/*": {"origins": "*"}})
  
@@ -170,5 +171,5 @@ def page_not_found(e):
 app.register_error_handler(500, page_not_found)
 
 if testing==True:
-  app.run(host='0.0.0.0', port=8080)
+  app.run(host='0.0.0.0', port=PORT)
 # TESTING CODE
