@@ -110,15 +110,6 @@ button{
   background-color: red;
   border-radius: 5px;
 }
-inlineparent{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction:inherit;
-}
-.inline{
-  display: inline-block;
-}
 .project-item h1{
   text-align: center;
   margin: 0;
@@ -135,6 +126,18 @@ inlineparent{
   align-items: center;
   width: 500px;
   margin: auto;
+  margin-top: 20px;
   background-color: gray;
   border-radius: 5px;
+}
+.nav {
+  padding: 20px;
+  list-style-type: none;
+  text-align: center;
+}
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }

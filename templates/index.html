@@ -21,27 +21,25 @@
     <img id="center-logo" src="{{ url_for('static', filename='logo.png') }}" alt="GroundScratch logo"/>
     <h2 class="subtitle">Welcome to GroundScratch - Everything, by every Scratcher.</h2>
     {% if current_user.is_authenticated %}
-    <p>Welcome back, {{username}}!</p>
+    <<p>>Welcome back, {{username}}!</p>
     {% endif %}
-    <inlineparent>
-      <p class="inline" ><a href="{{ url_for('credits_page') }}" class="navbar-item">
-        Credits
-      </a>
-      <p class="inline" ><a href="{{ url_for('project_list_page') }}" class="navbar-item">
-        Project list
-      </a>
+    <ul class="nav">
+    <li class="inline" ><a href="{{ url_for('credits_page') }}" >
+      Credits 
+    </a></li> 
+    <li class="inline" ><a href="{{ url_for('project_list_page') }}"> Project list </a></li> 
     {% if current_user.is_authenticated %}
-    <p class="inline" ><a href="{{ url_for('createproject_page') }}">Create a project</a></p>
-    <p class="inline" ><a href="{{ url_for('logout') }}" class="navbar-item">
-      Logout
-    </a></p>
+    <li class="inline" ><a href="{{ url_for('createproject_page') }}"> Create a project </a></li>
+    <p class="inline" ><a href="{{ url_for('logout') }}">
+      Logout 
+    </a></li>
     {% endif %}
     {% if not current_user.is_authenticated %}
-    <p class="inline"><a href="{{ url_for('login_page') }}" class="navbar-item">
+    <li class="inline"><a href="{{ url_for('login_page') }}">
         Login
-    </a></p>
-    <p class="inline"><a href="{{ url_for('signup_page') }}" class="navbar-item">Sign Up</a></p>
+    </a></li>
+    <li class="inline"><a href="{{ url_for('signup_page') }}"> Sign Up </a></li>
     {% endif %}
-  </inlineparent>
+    </ul>
   </body>
 </html>

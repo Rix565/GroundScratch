@@ -8,6 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin, LoginManager, login_user, login_required, current_user, logout_user
 from flask_cors import CORS
+import textwrap
 
 db = SQLAlchemy()
 
@@ -103,7 +104,7 @@ def credits_page():
 @app.route("/project/list/")
 def project_list_page():
   projects = Project.query.order_by(Project.id).all()
-  return render_template("project-list.html", projects=projects)
+  return render_template("project-list.html", projects=projects, textwrap=textwrap)
 @app.route('/signup/', methods=['POST'])
 def signup_post():
     email = request.form.get('email')
