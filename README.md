@@ -11,6 +11,7 @@ Clone the repository with this command:
 `git clone https://github.com/Rix565/GroundScratch/`
 
 Go to the newly created GroundScratch folder and modify the settings.py file.
+### YOU MUST SET THE TESTING VALUE TO TRUE IF ITS SET TO FALSE!!!! Or else you gonna enter the production environnement.
 
 Run this command to install all the dependencies:
 
@@ -27,6 +28,8 @@ Just go to http://localhost:8080 and it should work!
 Upload the repository zip file (Code->Download Zip) and extract it on a folder.
 
 Go to the newly created GroundScratch folder and modify the settings.py file.
+
+### YOU MUST SET THE TESTING VALUE TO FALSE IF ITS SET TO TRUE!!!! Or else you gonna enter the development environnement.
 
 If you're self-hosting the site:
 
