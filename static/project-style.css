@@ -69,7 +69,7 @@ body{
   width: 84vh;
   height: 67.5vh;
 }
-#projectframe h1, h2 {
+#projectframe h1, h2, p {
   margin-left: 1vh;
   top: 0;
   bottom: 7.5px;

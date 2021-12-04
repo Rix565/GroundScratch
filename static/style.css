@@ -118,5 +118,19 @@ inlineparent{
 }
 .inline{
   display: inline-block;
-  padding: 5px;
+}
+.project-item h1{
+  text-align: center;
+  margin: 0;
+  margin-right: 250px
+}
+.project-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin: auto;
+  background-color: gray;
+  border-radius: 5px;
 }
