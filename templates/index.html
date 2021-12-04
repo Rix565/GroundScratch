@@ -21,7 +21,7 @@
     <img id="center-logo" src="{{ url_for('static', filename='logo.png') }}" alt="GroundScratch logo"/>
     <h2 class="subtitle">Welcome to GroundScratch - Everything, by every Scratcher.</h2>
     {% if current_user.is_authenticated %}
-    <p>>Welcome back, {{username}}!</p>
+    <p>Welcome back, {{username}}!</p>
     {% endif %}
     <ul class="nav">
     <li class="inline" ><a href="{{ url_for('credits_page') }}" >
