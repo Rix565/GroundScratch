@@ -122,7 +122,11 @@ inlineparent{
 .project-item h1{
   text-align: center;
   margin: 0;
-  margin-right: 250px
+  margin-right: 350px
+}
+.project-item p{
+  text-align: center;
+  margin-left: 250px
 }
 .project-item{
   display: flex;
