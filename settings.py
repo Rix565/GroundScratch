@@ -14,6 +14,10 @@ SQLALCHEMY_DATABASE_URI = 'sqlite:///db.sqlite'
 # The url of your GroudScratch instance. Please make it https, because it can break the Scratch file player!
 ROOT_URL = 'http://localhost:6060/'
 
+# !!!! NOT FOR PRODUCTION !!!!
+# Enable development mode
+TESTING = False
+
 # !!!! ONLY FOR DEVELOPMENT ENVIRONNEMENT, NOT PRODUCTION !!! 
 # The port of your GroudScratch instance.
 PORT = 8080

@@ -27,9 +27,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 app.config['ROOT_URL'] = ROOT_URL
 db.init_app(app)
 CORS(app, resources={r"/*": {"origins": "*"}})
- 
-# SET TO FALSE BEFORE COMMITING
-testing=True
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True) # primary keys are required by SQLAlchemy
@@ -170,6 +167,6 @@ def page_not_found(e):
 
 app.register_error_handler(500, page_not_found)
 
-if testing==True:
+if TESTING==True:
   app.run(host='0.0.0.0', port=PORT)
 # TESTING CODE
