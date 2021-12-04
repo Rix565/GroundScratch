@@ -1,17 +1,47 @@
-# Polaris
+# GroundScratch
 A new community for Scratch
-## How to contribute
-This project is written in Python/HTML using Flask. All static files (E.g. Images, CSS, etc.) go in the static directory.
-Check the Projects section to see tasks that need to be done.
-Please don't commit to main and instead make a pull request :)
-If you can't code but want to get involved, check out the Discussions area to give suggestions or answer questions about the project.
-## Goals
-Create a truely open platform dedicated to sharing and recreating that is independent of the Scratch organization.
-## Show your support of a new Scratch!
-#### BBCode (Scratch Forums):
-```[url=https://user-images.githubusercontent.com/24457862/125127923-e4183100-e0c2-11eb-949e-189000a13455.png[/img][/url]```
-#### Markdown:
-```[![polarisbanner](https://user-images.githubusercontent.com/24457862/125127923-e4183100-e0c2-11eb-949e-189000a13455.png)](https://github.com/JTechnologies/Polaris)```
+## It is a fork of something else?
+Yes. It's a fork of <a href="https://github.com/JTechonlogies/Polaris">Polaris</a>.
+We started with that original source code, but what we built from that is completely made by us (with the help of some tutorials).
+## How to run?
+### Development environnement
+#### PS : Don't use that mode for production use! Because if you're using a WSGI server, it will break it & it's unsecure for production environnement.
+Clone the repository with this command:
 
-#### Here's what it looks like:
-[![polarisbanner](https://user-images.githubusercontent.com/24457862/125127923-e4183100-e0c2-11eb-949e-189000a13455.png)](https://github.com/JTechnologies/Polaris)
+`git clone https://github.com/Rix565/GroundScratch/`
+
+Go to the newly created GroundScratch folder and modify the settings part of the main.py file (in the future, settings will be separated in a settings.py file)
+
+Run this command to install all the dependencies:
+
+`pip install flask flask-login flask-cors`
+
+Finally, run this command (the 8080 port must be open):
+
+`python main.py`
+
+And here you go! Nothing to do else. Yes! You listened right! No DB configuration stuff, the db is handled by a sqllite file.
+
+Just go to http://localhost:8080 and it should work!
+#### Production environnement
+Upload the repository zip file (Code->Download Zip) and extract it on a folder.
+
+Go to the newly created GroundScratch folder and modify the settings part of the main.py file (in the future, settings will be separated in a settings.py file)
+
+If you're self-hosting the site:
+
+Run this command to install all the dependencies:
+
+`pip install flask flask-login flask-cors`
+
+If you're using a python website hoster:
+
+Use your hoster dependencies manager to install the packages: flask, flask-login, flask-cors
+
+Configure your WSGI server for the GroundScratch installation.
+
+Finally, run the WSGI server.
+
+And here you go! Nothing to do else. Yes! You listened right! No DB configuration stuff, the db is handled by a sqllite file.
+
+Just go to your domain URL and it should work!
