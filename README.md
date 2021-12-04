@@ -1,7 +1,7 @@
 # GroundScratch
 A new community for Scratch
 ## It is a fork of something else?
-Yes. It's a fork of <a href="https://github.com/JTechonlogies/Polaris">Polaris</a>.
+Yes. It's a fork of <a href="https://github.com/JTechnologies/Polaris/">Polaris</a>.
 We started with that original source code, but what we built from that is completely made by us (with the help of some tutorials).
 ## How to run?
 ### Development environnement
