@@ -1,0 +1,2 @@
+DON'T DELETE THIS FILE!
+Or else GitHub & zip compression will delete the /uploads/projects folder, the root folder for uploaded .sb3 (the scratch 3.0 file) projects.

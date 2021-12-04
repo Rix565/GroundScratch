@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Login | GroundScratch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="preload stylesheet" href="{{ url_for('static', filename='PlusJakartaSans.css') }}"/>
+    <meta name="theme-color" content="#090909"
+  </head>
+  <body>
+    <h1 class="page-title">Login</h1>
+    <p>login is cool coz you can do everything with it</p>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="error-notif">
+        <p>{{ messages[0] }}</p>
+    </div>
+    {% endif %}
+    {% endwith %}
+    <form class="create-project-form" enctype="multipart/form-data" method="post">
+            <input id="text-form" type=email name=email placeholder="Email Address"><br>
+            <br>
+            <input id="text-form" type=password name=password placeholder="The Super-secret password"><br>
+            <br>
+            <input type="checkbox" name="remember">Remember me<br>
+            <br>
+            <input type=submit value=Login>
+        </form>
+  </body>
+</html>

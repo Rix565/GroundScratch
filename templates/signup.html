@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Sign Up | GroundScratch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="preload stylesheet" href="{{ url_for('static', filename='PlusJakartaSans.css') }}"/>
+    <meta name="theme-color" content="#090909"
+  </head>
+  <body>
+    <h1 class="page-title">Sign Up</h1>
+    <p>create a micro$oft account now !!!1!1!1!1!!!1</p>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="error-notif">
+        <p>{{ messages[0] }}. if it's your account, you can go to the <a href="{{ url_for('login_page') }}">login page</a>.</p>
+    </div>
+    {% endif %}
+    {% endwith %}
+    <form class="create-project-form" enctype="multipart/form-data" method="post">
+            <input id="text-form" type=text name=username placeholder="Your username"><br>
+            <br>
+            <input id="text-form" type=email name=email placeholder="Email Address"><br>
+            <br>
+            <input id="text-form" type=password name=password placeholder="The Super-secret password"><br>
+            <br>
+            <input type=submit value=Signup>
+        </form>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>{{ project.name }}| Polaris</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="preload stylesheet" href="{{ url_for('static', filename='PlusJakartaSans.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='project-style.css') }}"/>
+  </head>
+  <body>
+    <div id="projectframe"><h1 class="left-aligned">{{ project.name }}</h1>
+    <h2 class="left-aligned">by {{ authorname }}</h2>
+    <p class="left-aligned">{{ project.description }}</p>
+    <iframe src="https://turbowarp.org/embed?project_url={{url_for_project}}" seamless="seamless">
+    </iframe>
+    <a href="{{url_for_project}}">Download source project file</a>
+    </div>
+  </body>
+</html>
