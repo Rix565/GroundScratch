@@ -100,6 +100,10 @@ def login_page():
 @app.route("/credits/")
 def credits_page():
   return render_template("credits.html")
+@app.route("/project/list/")
+def project_list_page():
+  projects = Project.query.order_by(Project.id).all()
+  return render_template("project-list.html", projects=projects)
 @app.route('/signup/', methods=['POST'])
 def signup_post():
     email = request.form.get('email')
@@ -151,6 +155,18 @@ def project_file(path):
 def logout():
     logout_user()
     return redirect(url_for('home'))
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+app.register_error_handler(404, page_not_found)
+
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template('500.html'), 404
+
+app.register_error_handler(500, page_not_found)
 
 if testing==True:
   app.run(host='0.0.0.0', port=8080)

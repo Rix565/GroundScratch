@@ -27,6 +27,9 @@
       <p class="inline" ><a href="{{ url_for('credits_page') }}" class="navbar-item">
         Credits
       </a>
+      <p class="inline" ><a href="{{ url_for('project_list_page') }}" class="navbar-item">
+        Project list
+      </a>
     {% if current_user.is_authenticated %}
     <p class="inline" ><a href="{{ url_for('createproject_page') }}">Create a project</a></p>
     <p class="inline" ><a href="{{ url_for('logout') }}" class="navbar-item">

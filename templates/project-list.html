@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Project list | GroundScratch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="preload stylesheet" href="{{ url_for('static', filename='PlusJakartaSans.css') }}"/>
+    <meta name="theme-color" content="#090909"
+  </head>
+  <body>
+    <h1 class="page-title" >Project List</h1>
+    <p>see all the awesome projects uploaded on GroundScratch!</p>
+    <div class="project-list">
+        {% for single_project in projects %}
+        <div class="project-item">
+            <h1><a href="{{ url_for('project_page', project_number=single_project.id) }}">{{ single_project.name }}</a></h1>
+            <p>{{ single_project.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
