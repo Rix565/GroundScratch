@@ -110,7 +110,7 @@ button{
   background-color: red;
   border-radius: 5px;
 }
-.project-item h1{
+.project-item h3{
   text-align: center;
   margin: 0;
   margin-right: 350px
