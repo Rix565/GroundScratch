@@ -101,7 +101,7 @@ def credits_page():
   return render_template("credits.html")
 @app.route("/project/list/")
 def project_list_page():
-  projects = Project.query.order_by(Project.id).all()
+  projects = Project.query.order_by(Project.id.desc()).all()
   return render_template("project-list.html", projects=projects, textwrap=textwrap)
 @app.route('/signup/', methods=['POST'])
 def signup_post():
