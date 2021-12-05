@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Settings | GroundScratch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="preload stylesheet" href="{{ url_for('static', filename='PlusJakartaSans.css') }}"/>
+    <meta name="theme-color" content="#090909"
+  </head>
+  <body>
+    <h1 class="page-title">Settings</h1>
+    <p>Modify your personnal settings here...</p>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="error-notif">
+        <p>{{ messages[0] }}</p>
+    </div>
+    {% endif %}
+    {% endwith %}
+    <form class="normal-form" method="post">
+        <p>Description</p>
+        <textarea id="text-form" name=description placeholder="Profile Description">{{ current_user.description }}</textarea><br>
+        <br>
+        <p>Update password</p>
+        <input id="text-form" type=password name=oldpassword placeholder="Old Password"><br>
+        <br>
+        <input id="text-form" type=password name=newpassword placeholder="New password"><br>
+        <br>
+        <input id="text-form" type=password name=newpasswordconfirm placeholder="Confirm new Password"><br>
+        <br>
+        <input type=submit value=Update>
+    </form>
+</body>
+</html>

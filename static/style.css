@@ -66,7 +66,7 @@ body{
   text-align: center;
 }
 }
-.create-project-form{
+.normal-form{
   padding-top: 80px;
   display: flex;
   align-items: center;
@@ -86,9 +86,11 @@ textarea{
   resize: vertical; 
   max-height: 300px; 
   min-height: 200px;
+  white-space: pre-line
 }
 p{
   text-align: center;
+  white-space: pre-line
 }
 input[type=submit]{
   border-radius: 5px;

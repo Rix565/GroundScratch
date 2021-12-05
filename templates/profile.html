@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Profile of {{ user.name }} | GroundScratch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="preload stylesheet" href="{{ url_for('static', filename='PlusJakartaSans.css') }}"/>
+    <meta name="theme-color" content="#090909"
+  </head>
+  <body>
+    <h1 class="page-title">Profile of {{ user.name }}</h1>
+    <p>Description: {{ user.description }}</p>
+    <h2 class="page-title">Games of {{ user.name }}</h2>
+    <div class="project-list">
+        {% for single_project in projects %}
+        <div class="project-item">
+            <h3><a href="{{ url_for('project_page', project_number=single_project.id) }}">{{  textwrap.shorten(single_project.name, width=35, placeholder="...") }}</a></h3>
+            <p>{{  textwrap.shorten(single_project.description, width=23, placeholder="...") }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

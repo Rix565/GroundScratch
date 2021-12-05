@@ -19,7 +19,7 @@
   </head>
   <body style="background-image: url('{{ url_for('static', filename='starbg.png')}}');">
     <img id="center-logo" src="{{ url_for('static', filename='logo.png') }}" alt="GroundScratch logo"/>
-    <h2 class="subtitle">Welcome to GroundScratch - Everything, by every Scratcher.</h2>
+    <h2 class="subtitle">Welcome to GroundScratch - Doing what Scratch don't.</h2>
     {% if current_user.is_authenticated %}
     <p>Welcome back, {{username}}!</p>
     {% endif %}
@@ -32,6 +32,12 @@
     <li class="inline" ><a href="{{ url_for('createproject_page') }}"> Create a project </a></li>
     <li class="inline" ><a href="{{ url_for('logout') }}">
       Logout 
+    </a></li>
+    <li class="inline" ><a href="{{ url_for('settings_page') }}">
+      Settings 
+    </a></li>
+    <li class="inline" ><a href="{{ url_for('profile_page', user_id=current_user.id) }}">
+      My Profile 
     </a></li>
     {% endif %}
     {% if not current_user.is_authenticated %}
