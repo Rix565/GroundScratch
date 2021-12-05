@@ -20,7 +20,7 @@ Go to the newly created GroundScratch folder and modify the settings.py file.
 
 Run this command to install all the dependencies:
 
-`pip install flask flask-login flask-cors flask-migrate`
+`pip install flask flask-login flask-cors flask-migrate pymysql`
 
 Run this command to configure your database for a GroundScratch installation:
 
@@ -51,7 +51,7 @@ Go to the newly created GroundScratch folder and modify the settings.py file.
 
 Run this command to install all the dependencies:
 
-`pip install flask flask-login flask-cors`
+`pip install flask flask-login flask-cors flask-migrate pymysql`
 
 Run this command to configure your database for a GroundScratch installation:
 
