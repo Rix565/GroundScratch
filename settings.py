@@ -12,7 +12,7 @@ SECRET_KEY = 'secret key'
 SQLALCHEMY_DATABASE_URI = 'sqlite:///db.sqlite'
 
 # The url of your GroudScratch instance. Please make it https, because it can break the Scratch file player!
-ROOT_URL = 'http://localhost:6060/'
+ROOT_URL = 'http://localhost:8080/'
 
 # !!!! NOT FOR PRODUCTION !!!!
 # Enable development mode
