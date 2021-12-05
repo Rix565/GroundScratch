@@ -28,7 +28,7 @@ Run this command to configure your database for a GroundScratch installation:
 
 Finally, run this command (the 8080 port (or the port you set) must be open):
 
-`python main.py`
+`python app.py`
 
 And here you go! Nothing to do else.
 
