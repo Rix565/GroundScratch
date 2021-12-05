@@ -12,7 +12,7 @@
     <div class="project-list">
         {% for single_project in projects %}
         <div class="project-item">
-            <h3><a href="{{ url_for('project_page', project_number=single_project.id) }}">{{  textwrap.shorten(single_project.name, width=10, placeholder="...") }}</a></h3>
+            <h3><a href="{{ url_for('project_page', project_number=single_project.id) }}">{{  textwrap.shorten(single_project.name, width=35, placeholder="...") }}</a></h3>
             <p>{{  textwrap.shorten(single_project.description, width=23, placeholder="...") }}</p>
         </div>
         {% endfor %}
