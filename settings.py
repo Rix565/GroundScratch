@@ -9,7 +9,7 @@ UPLOAD_FOLDER = os.path.dirname(os.path.realpath(__file__)) + '/uploads/'
 SECRET_KEY = 'secret key'
 
 # The SQLAlchemy Database URL. Please, do not change that if you don't know what you are doing!
-SQLALCHEMY_DATABASE_URI = 'sqlite:///db.sqlite'
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root@localhost/GroundScratch'
 
 # The url of your GroudScratch instance. Please make it https, because it can break the Scratch file player!
 ROOT_URL = 'http://localhost:8080/'
