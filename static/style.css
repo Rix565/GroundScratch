@@ -141,3 +141,20 @@ button{
   padding-left: 20px;
   padding-right: 20px;
 }
+.post-item h3{
+  text-align: center;
+}
+.post-item p{
+  text-align: center;
+}
+.post-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: gray;
+  border-radius: 5px;
+}

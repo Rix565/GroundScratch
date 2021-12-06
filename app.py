@@ -47,6 +47,13 @@ class Project(db.Model):
     project_file = db.Column(db.String(80), unique=True)
     authorid = db.Column(db.Integer)
 
+class Post(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(200))
+    content = db.Column(db.String(5000))
+    authorid = db.Column(db.Integer)
+    communityid = db.Column(db.Integer)
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
@@ -97,6 +104,15 @@ def project_page(project_number):
   else:
         return render_template('project-404.html', project_number=project_number)
 
+@app.route('/post/<int:post_number>/')
+def post_page(post_number):
+  post = Post.query.filter_by(id=post_number).first()
+  if post:
+    user = User.query.filter_by(id=post.authorid).first()
+    return render_template('post.html', post_number=post_number, post=post, authorname=user.name)
+  else:
+        return render_template('post-404.html', post_number=post_number)
+
 @app.route('/create/', methods=['GET', 'POST'])
 @login_required
 def createproject_page():
@@ -117,12 +133,25 @@ def createproject_page():
       return render_template('args-err.html')
   return render_template('create.html')
 
+@app.route('/post/create/', methods=['GET', 'POST'])
+@login_required
+def createpost_page():
+  if request.method == 'POST':
+      name = request.form['name']
+      content = request.form['content']
+      new_post = Post(name=name, content=content, authorid=current_user.id, communityid=None)
+      db.session.add(new_post)
+      db.session.commit()
+      return redirect(url_for('home'))
+  return render_template('create-post.html')
+
 @app.route('/profile/<int:user_id>/')
 def profile_page(user_id):
   user = User.query.filter_by(id=user_id).first()
   if user:
     projects = Project.query.filter_by(authorid=user_id).order_by(Project.id.desc()).all()
-    return render_template("profile.html", user=user, projects=projects, textwrap=textwrap)
+    posts = Post.query.filter_by(authorid=user_id).order_by(Post.id.desc()).all()
+    return render_template("profile.html", user=user, projects=projects, posts=posts, textwrap=textwrap)
   else:
     return render_template('profile-404.html', user_id=user_id)
 

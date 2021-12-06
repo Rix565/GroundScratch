@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Create a Post | GroundScratch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="preload stylesheet" href="{{ url_for('static', filename='PlusJakartaSans.css') }}"/>
+    <meta name="theme-color" content="#090909"
+  </head>
+  <body>
+    <h1 class="page-title">Create a post</h1>
+    <form class="normal-form" enctype="multipart/form-data" method="post">
+            <input id="text-form" type=text name=name placeholder="Post Name"><br>
+            <textarea id="text-form" name=content placeholder="Content"></textarea>
+            <br>
+            <input type=submit value=Create>
+        </form>
+  </body>
+</html>

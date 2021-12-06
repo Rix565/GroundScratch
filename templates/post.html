@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>{{ post.name }} | GroundScratch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="preload stylesheet" href="{{ url_for('static', filename='PlusJakartaSans.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='project-style.css') }}"/>
+  </head>
+  <body>
+    <div id="projectframe"><h1 class="left-aligned">{{ post.name }}</h1>
+    <h2 class="left-aligned">by <a href="{{ url_for('profile_page', user_id=post.authorid) }}">{{ authorname }}</a></h2>
+    <p class="left-aligned">{{ post.content }}</p>
+  </body>
+</html>

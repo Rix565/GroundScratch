@@ -18,5 +18,14 @@
         </div>
         {% endfor %}
     </div>
+    <h2 class="page-title">{{ user.name }}'s Posts</h2>
+    <div class="posts-list">
+        {% for post in posts %}
+        <div class="post-item">
+            <h3><a href="{{ url_for('post_page', post_number=post.id) }}">{{  textwrap.shorten(post.name, width=35, placeholder="...") }}</a></h3>
+            <p>{{  textwrap.shorten(post.content, width=35, placeholder="...") }}</p>
+        </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
