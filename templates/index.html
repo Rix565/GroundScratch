@@ -39,6 +39,9 @@
     <li class="inline" ><a href="{{ url_for('profile_page', user_id=current_user.id) }}">
       My Profile 
     </a></li>
+    <li class="inline" ><a href="{{ url_for('post_page') }}">
+      Create a post
+    </a></li>
     {% endif %}
     {% if not current_user.is_authenticated %}
     <li class="inline"><a href="{{ url_for('login_page') }}">
