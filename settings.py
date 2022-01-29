@@ -8,7 +8,7 @@ UPLOAD_FOLDER = os.path.dirname(os.path.realpath(__file__)) + '/uploads/'
 # The secret key. Change it from the default and keep it secret!
 SECRET_KEY = 'secret key'
 
-# The SQLAlchemy Database URL. Please, do not change that if you don't know what you are doing!
+# The SQLAlchemy Database URL. Change it to your database creditentials!
 SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root@localhost/GroundScratch'
 
 # The url of your GroudScratch instance. Please make it https, because it can break the Scratch file player!
